@@ -1,0 +1,6 @@
+<?php
+define( 'AUTOPIGEON_VERSION' , '1.0.0');
+define( 'AUTOPIGEON_DEVELOPMENT_MODE' , true);
+define( 'AUTOPIGEON_API_DOMAIN', "http://192.168.0.191:8000/" );
+define( 'AUTOPIGEON_DASHBOARD_DOMAIN', "http://192.168.0.191:3000/");
+?>

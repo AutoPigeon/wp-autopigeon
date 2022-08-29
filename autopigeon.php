@@ -11,11 +11,42 @@
  * Domain Path:     /languages
  */
 
-define( 'AUTOPIGEON_VERSION' , '1.0.0');
-define( 'AUTOPIGEON_DEVELOPMENT_MODE' , true);
+require_once dirname(__FILE__) . "/config.php";
 define( 'AUTOPIGEON_PLUGIN_DIRECTORY' , plugin_dir_path( __FILE__ ));
 
 require_once( AUTOPIGEON_PLUGIN_DIRECTORY . "admin/admin.php");
+
+function activate_autopigeon(){
+    require_once(AUTOPIGEON_PLUGIN_DIRECTORY . "include/activate.php");
+    $activator = new AutoPigeon_Activate();
+    $activator->activate();
+}
+function deactivate_autopigeon(){
+    require_once(AUTOPIGEON_PLUGIN_DIRECTORY . "include/deactivate.php");
+    $deactivator = new AutoPigeon_Deactivate();
+    $deactivator->deactivate();
+}
+
+register_activation_hook( __FILE__, 'activate_autopigeon' );
+register_deactivation_hook( __FILE__, 'deactivate_autopigeon' );
+
+
+
+function callback($buffer){
+    return $buffer;
+}
+
+function add_ob_start(){
+    ob_start("callback");
+}
+
+function flush_ob_end(){
+    ob_end_flush();
+}
+
+add_action('init', 'add_ob_start');
+add_action('wp_footer', 'flush_ob_end');
+
 
 class AutoPigeon{
     protected $admin;
