@@ -1,0 +1,15 @@
+{
+    "name": "autopigeon/wp-autopigeon",
+    "description": "Wordpress plugin for integrating with AutoPigeon",
+    "type": "project",
+    "license": "GPL2.0",
+    "authors": [
+        {
+            "name": "InsaneMiner",
+            "email": "gurued58@gmail.com"
+        }
+    ],
+    "require": {
+        "squizlabs/php_codesniffer": "3.*"
+    }
+}

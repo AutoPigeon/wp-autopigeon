@@ -1,0 +1,15 @@
+first run:
+composer install
+
+then you must install the wordpress rule standards
+
+go to any directory and run
+git clone -b master https://github.com/WordPress/WordPress-Coding-Standards.git wpcs
+
+then go back to the plugins directory and run:
+./vender/bin/phpcs --config-set installed_paths /path/to/wpcs
+
+
+if you have issues checkout:
+
+https://wordpress.stackexchange.com/questions/385746/how-to-set-up-phpcs-with-wordpress-coding-standard-with-php8

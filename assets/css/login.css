@@ -1,0 +1,65 @@
+body {font-family: Arial, Helvetica, sans-serif;}
+
+.form-container{
+	width: 80%;
+	margin: auto;
+	display: flex;
+  	justify-content: center;
+}
+input[type=email], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  border: 1px solid #ccc;
+  margin: 8px 0;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+.form-title{
+	text-align: center;
+}
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+}
+
+.form-errors{
+	text-align: center;
+	margin: 10px;
+	padding: 10px;
+}
+.form-error{
+	border: 1px solid red;
+	border-radius: 5px;
+	padding: 10px;
+	margin: 5px;
+	background-color: rgba(255, 100, 100, 0.4);;
+}
+.form-error.span{
+	opacity: 1;
+}

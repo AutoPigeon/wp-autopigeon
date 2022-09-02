@@ -1,0 +1,35 @@
+{
+  "name": "wp-autopigeon",
+  "version": "1.0.0",
+  "description": "AutoPigeon plugin for wordpress",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "wp-scripts start",
+    "build": "wp-scripts build",
+    "format": "wp-scripts format",
+    "packages-update": "wp-scripts packages-update",
+    "plugin-zip": "wp-scripts plugin-zip",
+    "lint:css": "wp-scripts lint-style",
+    "lint:js": "wp-scripts lint-js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AutoPigeon/wp-autopigeon.git"
+  },
+  "keywords": [],
+  "author": "Joel Schofield",
+  "license": "GPL-2.0-or-later",
+  "bugs": {
+    "url": "https://github.com/AutoPigeon/wp-autopigeon/issues"
+  },
+  "homepage": "https://github.com/AutoPigeon/wp-autopigeon#readme",
+  "devDependencies": {
+    "@wordpress/scripts": "^24.0.0"
+  },
+  "dependencies": {
+    "@wordpress/element": "^4.14.0",
+    "@wordpress/icons": "^9.7.0",
+    "jwt-decode": "^3.1.2"
+  }
+}
